@@ -10,11 +10,13 @@
     <!--<bean id="testBean" class="ru.alisher.springcourse.TestBean">
         <constructor-arg value="Nail" />
     </bean>-->
+
+    <context:property-placeholder location="classpath:musicPlayer.properties" />
     <bean id="musicBean" class="ru.alisher.springcourse.RocklMusic" ></bean>
     <bean id="musicPlayer" class="ru.alisher.springcourse.MusicPlayer" >
         <!--<constructor-arg ref="musicBean"/>-->
         <property name="music" ref="musicBean" />
-        <property name="name" value="musicBeanmusicBean" />
-        <property name="volume" value="50" />
+        <property name="name" value="${musicPlayer.name}" />
+        <property name="volume" value="${musicPlayer.volume}" />
     </bean>
 </beans>
