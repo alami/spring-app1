@@ -12,7 +12,7 @@ public class TestSprint {
         );
         //TestBean testBean = context.getBean("testBean", TestBean.class);
         //Music music = context.getBean("musicBean", Music.class);
-        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class); //new MusicPlayer(music);
+        /*MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class); //new MusicPlayer(music);
         MusicPlayer musicPlayerSecond = context.getBean("musicPlayer",MusicPlayer.class);
 
         boolean comparision = musicPlayer == musicPlayerSecond;
@@ -22,7 +22,10 @@ public class TestSprint {
 
         musicPlayer.playMusic();
         System.out.println(musicPlayer.getName());
-        System.out.println(String.valueOf(musicPlayer.getVolume()));
+        System.out.println(String.valueOf(musicPlayer.getVolume()));*/
+
+        ClassicalMusic classicalMusic = context.getBean("musicBean", ClassicalMusic.class);
+        System.out.println(classicalMusic.getSong());
         context.close();
     }
 }
