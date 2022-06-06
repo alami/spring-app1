@@ -10,6 +10,9 @@
     <!--<bean id="testBean" class="ru.alisher.springcourse.TestBean">
         <constructor-arg value="Nail" />
     </bean>-->
-    <bean id="musicBean" class="ru.alisher.springcourse.RocklMusic" >
+    <bean id="musicBean" class="ru.alisher.springcourse.RocklMusic" ></bean>
+    <bean id="musicPlayer" class="ru.alisher.springcourse.MusicPlayer" >
+        <!--<constructor-arg ref="musicBean"/>-->
+        <property name="music" ref="musicBean" />
     </bean>
 </beans>

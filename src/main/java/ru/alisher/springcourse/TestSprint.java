@@ -10,8 +10,8 @@ public class TestSprint {
                 "applicationContext.xml"
         );
         //TestBean testBean = context.getBean("testBean", TestBean.class);
-        Music music = context.getBean("musicBean", Music.class);
-        MusicPlayer musicPlayer = new MusicPlayer(music);
+        //Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class); //new MusicPlayer(music);
         musicPlayer.playMusic();
         context.close();
     }
