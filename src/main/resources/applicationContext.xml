@@ -13,7 +13,7 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties" />
     <bean id="musicBean" class="ru.alisher.springcourse.RocklMusic" ></bean>
-    <bean id="musicPlayer" class="ru.alisher.springcourse.MusicPlayer" >
+    <bean id="musicPlayer" class="ru.alisher.springcourse.MusicPlayer" scope="prototype">
         <!--<constructor-arg ref="musicBean"/>-->
         <property name="music" ref="musicBean" />
         <property name="name" value="${musicPlayer.name}" />
