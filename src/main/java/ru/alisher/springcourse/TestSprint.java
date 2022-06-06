@@ -24,15 +24,14 @@ public class TestSprint {
         System.out.println(musicPlayer.getName());
         System.out.println(String.valueOf(musicPlayer.getVolume()));*/
 
-        Music music = context.getBean("rockMusic", Music.class);
-        Music music1 = context.getBean("classicalMusic", Music.class);
+//        Music music = context.getBean("rockMusic", Music.class);
+//        Music music1 = context.getBean("classicalMusic", Music.class);
         /*System.out.println(music.getSong());
         System.out.println(music1.getSong());*/
 
-        MusicPlayer mp = new MusicPlayer(music);
+        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
         mp.playMusic();
-        MusicPlayer mp1 = new MusicPlayer(music1);
-        mp1.playMusic();
+
         context.close();
     }
 }
