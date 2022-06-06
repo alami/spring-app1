@@ -14,5 +14,7 @@
     <bean id="musicPlayer" class="ru.alisher.springcourse.MusicPlayer" >
         <!--<constructor-arg ref="musicBean"/>-->
         <property name="music" ref="musicBean" />
+        <property name="name" value="musicBeanmusicBean" />
+        <property name="volume" value="50" />
     </bean>
 </beans>

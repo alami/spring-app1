@@ -2,6 +2,7 @@ package ru.alisher.springcourse;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import javax.swing.plaf.IconUIResource;
 import java.util.Arrays;
 
 public class TestSprint {
@@ -13,6 +14,8 @@ public class TestSprint {
         //Music music = context.getBean("musicBean", Music.class);
         MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class); //new MusicPlayer(music);
         musicPlayer.playMusic();
+        System.out.println(musicPlayer.getName());
+        System.out.println(String.valueOf(musicPlayer.getVolume()));
         context.close();
     }
 }
