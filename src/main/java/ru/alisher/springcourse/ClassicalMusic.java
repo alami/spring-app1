@@ -1,5 +1,8 @@
 package ru.alisher.springcourse;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class ClassicalMusic implements Music {
     private ClassicalMusic(){}
     public static ClassicalMusic getClassicalMusic(){
