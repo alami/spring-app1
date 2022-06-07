@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 */
 public class MusicPlayer {
-    @Autowired
+//        @Autowired
     @Qualifier("rockMusic")
     private Music music;
     @Value("${musicPlayer.name}")

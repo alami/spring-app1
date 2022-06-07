@@ -7,7 +7,7 @@ import javax.annotation.PreDestroy;
 
 @Component
 public class ClassicalMusic implements Music {
-    private ClassicalMusic(){}
+    public ClassicalMusic(){}
     public static ClassicalMusic getClassicalMusic(){
         System.out.println("hi");
         return new ClassicalMusic();
